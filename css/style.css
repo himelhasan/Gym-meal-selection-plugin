@@ -1,0 +1,216 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Archivo Black", Sans-serif;
+}
+
+fieldset {
+  display: none;
+}
+
+fieldset.step.show {
+  display: block;
+}
+
+/*  */
+
+/*  */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/*  */
+label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mealResult {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+  /* Mobile devices */
+  .mealResult {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablets */
+  .mealResult {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*  */
+
+.hidden {
+  display: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 360px;
+  margin: 0 25px;
+  background: #fff;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.card .imgBox {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: #48fd4a;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.card .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .img-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+.card .imgBox:hover .img-blur {
+  opacity: 1;
+}
+.card .img-blur a {
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.card .img-blur::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  border: 2px dotted #fff;
+  pointer-events: none;
+  animation: border-anime 15s linear infinite;
+}
+@keyframes border-anime {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.card .title {
+  margin: 15px 0;
+}
+.card .title a {
+  font-size: 1.6rem;
+  color: #555;
+  text-decoration: none;
+  transition: 0.4s;
+}
+.card .title a:hover {
+  color: #48fd4a;
+}
+.card .text {
+  font-size: 0.8rem;
+  line-height: 1.5em;
+  color: #555;
+  opacity: 0.6;
+}
+
+/*  */
+
+li {
+  display: inline-block;
+}
+
+input[type="checkbox"][id^="checkbox"] {
+  display: none;
+}
+
+label {
+  padding: 0px 10px;
+  display: block;
+  position: relative;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+label p {
+  text-align: center;
+  font-family: Open Sans;
+  font-weight: 700;
+}
+
+label img {
+  height: 80px;
+  width: 80px;
+  transition-duration: 0.2s;
+}
+
+:checked + label:before {
+  transform: scale(2);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.checkBoxImage {
+  width: 100px;
+  border-radius: 50% !important;
+}
+.checkBoxTitle {
+  color: #ffffff;
+  font-family: roboto !important;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 1.3em;
+  font-weight: 400 !important;
+}
+
+div#breakfast-options {
+  display: flex;
+  align-items: flex-end;
+}
+fieldset.step.show {
+  border: 2px solid #48fd4a;
+  padding: 50px;
+}
+input[type="radio"] {
+  border: 0px;
+  width: 100%;
+  height: 1.6em;
+}
