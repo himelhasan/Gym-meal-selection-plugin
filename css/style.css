@@ -22,13 +22,6 @@ textarea {
   width: 100%;
   margin-bottom: 10px;
 }
-/*  */
-label {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: center;
-}
 
 .mealResult {
   display: grid;
@@ -159,11 +152,14 @@ input[type="checkbox"][id^="checkbox"] {
 }
 
 label {
-  padding: 0px 10px;
-  display: block;
   position: relative;
   margin: 0px 10px;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  gap: 10px;
+  justify-content: flex-start;
 }
 
 label p {
@@ -195,22 +191,30 @@ label img {
 .checkBoxTitle {
   color: #ffffff;
   font-family: roboto !important;
-  font-size: 18px;
+  font-size: 22px;
   text-transform: uppercase;
   line-height: 1.3em;
-  font-weight: 400 !important;
+  font-weight: 600 !important;
 }
 
-div#breakfast-options {
-  display: flex;
-  align-items: flex-end;
-}
 fieldset.step.show {
   border: 2px solid #48fd4a;
   padding: 50px;
 }
-input[type="radio"] {
-  border: 0px;
-  width: 100%;
-  height: 1.6em;
+#snacks1-options,
+#snacks2-options,
+#snacks3-options,
+#lunch-options,
+#dinner-options,
+#breakfast-options {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.title {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  text-transform: capitalize !important;
+  line-height: 1.5em !important;
 }

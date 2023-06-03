@@ -27,13 +27,14 @@
           setup_postdata($post);
           $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');
           ?>
+          <div class=checkbox>
           <input type="radio"id="<?php echo esc_attr('breakfast-' . $post->ID); ?>" name="breakfast" value="<?php echo esc_attr($post->ID); ?>">
           <label for="<?php echo esc_attr('breakfast-' . $post->ID); ?>">
           <label for="<?php echo esc_attr($post_type . '-' . $post->ID); ?>"> 
           </label>
           <img class="checkBoxImage" src="<?php echo esc_url($featured_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="50">
         <p class="checkBoxTitle">  <?php echo esc_html($post->post_title); ?></p>
-          </label>
+          </label></div>
           <?php
         }
         wp_reset_postdata();
@@ -64,14 +65,15 @@
       setup_postdata($post);
       $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');
       ?>
-      <input type="radio" id="<?php echo esc_attr('snacks1-' . $post->ID); ?>" name="snacks1" value="<?php echo esc_attr($post->ID); ?>">
-      <label for="<?php echo esc_attr('snacks1-' . $post->ID); ?>">
-       
-          <?php echo esc_html($post->post_title); ?>
-       
-        <img src="<?php echo esc_url($featured_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="50">
-      </label>
-      <?php
+   <div class=checkbox>    <input type="radio" id="<?php echo esc_attr('snacks1-' . $post->ID); ?>" 
+      name="snacks1" value="<?php echo esc_attr($post->ID); ?>">
+      <label for="<?php echo esc_attr('snacks1-' . $post->ID); ?>"> 
+      <label for="<?php echo esc_attr($post_type . '-' . $post->ID); ?>"> 
+          </label>
+          <img class="checkBoxImage" src="<?php echo esc_url($featured_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="50">
+        <p class="checkBoxTitle">  <?php echo esc_html($post->post_title); ?></p>
+          </label> </div>
+<?php
      }
       wp_reset_postdata();
       ?>
@@ -102,14 +104,14 @@
           setup_postdata($post);
           $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');
           ?>
+           <div class=checkbox>
           <input type="radio"id="<?php echo esc_attr('lunch-' . $post->ID); ?>" name="lunch" value="<?php echo esc_attr($post->ID); ?>">
           <label for="<?php echo esc_attr('lunch-' . $post->ID); ?>">
-          <label for="<?php echo esc_attr($post_type . '-' . $post->ID); ?>">
-          
-          <?php echo esc_html($post->post_title); ?>
-        </label>
-            <img src="<?php echo esc_url($featured_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="50">
+          <label for="<?php echo esc_attr($post_type . '-' . $post->ID); ?>"> 
           </label>
+          <img class="checkBoxImage" src="<?php echo esc_url($featured_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="50">
+        <p class="checkBoxTitle">  <?php echo esc_html($post->post_title); ?></p>
+          </label><div>
           <?php
         }
         wp_reset_postdata();
@@ -140,13 +142,14 @@
       setup_postdata($post);
       $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');
       ?>
+       <div class=checkbox>
       <input type="radio" id="<?php echo esc_attr('snacks2-' . $post->ID); ?>" name="snacks2" value="<?php echo esc_attr($post->ID); ?>">
       <label for="<?php echo esc_attr('snacks2-' . $post->ID); ?>">
-       
-          <?php echo esc_html($post->post_title); ?>
-      
-        <img src="<?php echo esc_url($featured_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="50">
-      </label>
+      <label for="<?php echo esc_attr($post_type . '-' . $post->ID); ?>"> 
+          </label>
+          <img class="checkBoxImage" src="<?php echo esc_url($featured_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="50">
+        <p class="checkBoxTitle">  <?php echo esc_html($post->post_title); ?></p>
+          </label> </div>
       <?php
       }
      wp_reset_postdata();
@@ -177,15 +180,14 @@
           setup_postdata($post);
           $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');
           ?>
+           <div class=checkbox>
           <input type="radio"id="<?php echo esc_attr('dinner-' . $post->ID); ?>" name="dinner" value="<?php echo esc_attr($post->ID); ?>">
           <label for="<?php echo esc_attr('dinner-' . $post->ID); ?>">
-          <label for="<?php echo esc_attr($post_type . '-' . $post->ID); ?>">
-        
-          <?php echo esc_html($post->post_title); ?>
-      
-      </label>
-            <img src="<?php echo esc_url($featured_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="50">
+          <label for="<?php echo esc_attr($post_type . '-' . $post->ID); ?>"> 
           </label>
+          <img class="checkBoxImage" src="<?php echo esc_url($featured_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="50">
+        <p class="checkBoxTitle">  <?php echo esc_html($post->post_title); ?></p>
+          </label> <div>
           <?php
         }
         wp_reset_postdata();
@@ -220,13 +222,14 @@
       setup_postdata($post);
       $featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');
       ?>
+       <div class=checkbox>
       <input type="radio" id="<?php echo esc_attr('snacks3-' . $post->ID); ?>" name="snacks3" value="<?php echo esc_attr($post->ID); ?>">
       <label for="<?php echo esc_attr('snacks3-' . $post->ID); ?>">
-       
-          <?php echo esc_html($post->post_title); ?>
-      
-        <img src="<?php echo esc_url($featured_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="50">
-      </label>
+      <label for="<?php echo esc_attr($post_type . '-' . $post->ID); ?>"> 
+          </label>
+          <img class="checkBoxImage" src="<?php echo esc_url($featured_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="50">
+        <p class="checkBoxTitle">  <?php echo esc_html($post->post_title); ?></p>
+          </label> </div>
       <?php
     }
     wp_reset_postdata();
